@@ -260,7 +260,7 @@ func (t *RemoteTracer) doWrite() {
 				s.Reset()
 			} else {
 				gzipW.Close()
-				helpers.FullClose(s)
+				s.Close()
 			}
 			return
 		}
